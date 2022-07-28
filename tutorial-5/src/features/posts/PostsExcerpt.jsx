@@ -3,7 +3,12 @@ import TimeAgo from './TimeAgo';
 import ReactionButtons from './ReactionButtons';
 import { Link } from "react-router-dom";
 
-const PostsExcerpt = ({ post }) => {
+import { useSelector } from 'react-redux';
+import { selectPostById } from './postsSlice';
+
+const PostsExcerpt = ({ postId }) => {
+    const post = useSelector(state => selectPostById(state, postId))
+
     return (
         <div className="border
                         border-solid 
