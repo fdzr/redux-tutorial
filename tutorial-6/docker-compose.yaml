@@ -13,10 +13,10 @@ services:
 
   json-server:
     build: ./data/
-    command: json-server -w /app/db.json -H 0.0.0.0 -p 3500
     ports:
-      - 3500:3500
+      - 3500:3000
     volumes:
-      - ./data/db.json:/app/db.json
+      - ./data/db.json:/data/db.json
+    command: json-server --watch /data/db.json -H 0.0.0.0
   
   
