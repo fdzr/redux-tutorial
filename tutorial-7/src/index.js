@@ -9,7 +9,7 @@ import { fetchUsers } from './features/users/usersSlice';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 store.dispatch(extendedApiSlice.endpoints.getPosts.initiate());
-store.dispatch(fetchPosts());
+store.dispatch(fetchUsers());
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
